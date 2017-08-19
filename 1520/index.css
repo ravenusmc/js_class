@@ -1,0 +1,38 @@
+/* Generic Fonts which will be used throughout the site */
+
+.font {
+  font-family: Courier;
+}
+
+
+/* CSS for the page */
+body {
+  background-color: rgb(37, 94,105);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main_area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+table {
+  background-color: rgb(1, 44, 52);
+  border-radius: 8px;
+}
+
+tr, a {
+  color: rgb(106, 149, 157);
+}
+
+tr:hover, a:hover {
+  color: orange;
+}
+
