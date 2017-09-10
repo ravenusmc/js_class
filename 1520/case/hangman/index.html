@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>HangMan</title>
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+  <header class='center font'>
+    <h1 class='main_title'>Hang Man</h1>
+    <h3 class='sub_title'>Can you save him?</h3>
+    <div class='button_div'>
+      <button onclick='chooseWord();' class='start_button'>Start</button>
+      <button onclick='reset();' class='reset_button'>Reset</button>
+    </div>
+  </header>
+
+  <main>
+
+    <div class='value_area'>
+      <h2 class='center font'>Type in a Letter</h2>
+      <form>
+        <label>Guess: <input type='text' id='guessValue' name='guess'></label>
+        <button onclick='getValue(word);return false;' id='enteredValue'>Enter!</button>
+      </form>
+      <div>
+        <h2 class='corrent_title center font'>Correct Letters:</h2>
+
+        <table>
+          <tr>
+            <td id='one_correct'>99</td>
+            <td id='two_correct'>99</td>
+            <td id='three_correct'>99</td>
+            <td id='four_correct'>99</td>
+            <td id='five_correct'>99</td>
+            <td id='six_correct'>99</td>
+          </tr>
+        </table>
+
+      </div>
+    </div>
+
+    <div class='noose_area'>
+      <img id='head'  class='head' src="img/head.jpg">
+      <img id='body'  class='body' src='img/body.jpg'>
+      <img id='l_arm' class='l_arm' src='img/left_arm.jpg'>
+      <img id='r_arm' class='r_arm' src='img/right_arm.jpg'>
+      <img id='r_leg' class='r_leg' src='img/right_leg.jpg'>
+      <img id='l_leg' class='l_leg' src='img/left_leg.jpg'>
+    </div>
+
+    <div id='used_word_area' class='userArea'>
+      <h2 class='center font'>Used Letters:</h2>
+      <table>
+        <tr>
+          <td id='one'>99</td>
+          <td id='two'>99</td>
+          <td id='three'>99</td>
+          <td id='four'>99</td>
+          <td id='five'>99</td>
+          <td id='six'>99</td>
+        </tr>
+      </table>
+    </div>
+
+  </main>
+
+<footer>
+    Copyright &copy; 2017 Mike Cuddy Productions
+    <br/>
+    <p>
+        <a href="https://github.com/ravenusmc"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
+        <a href="https://twitter.com/"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/mcuddy1/"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </p>
+</footer>
+
+
+<script type="text/javascript" src='js/index.js'></script>
+</body>
+</html>
