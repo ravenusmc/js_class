@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!--
+      JavaScript 6th Edition
+      Chapter 3
+      Hands-on Project 3-4
+
+      Author: Mike Cuddy
+      Date:   9-10-2017
+
+      Filename: index.htm
+   -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title>Hands-on Project 3-5</title>
+   <link rel="stylesheet" href="styles.css" />
+   <script src="modernizr.custom.05819.js"></script>
+</head>
+
+<body>
+   <header>
+      <h1>
+         Hands-on Project 3-5
+      </h1>
+   </header>
+
+   <article>
+      <div id="results">
+          <ul>
+             <li id="item1"></li>
+             <li id="item2"></li>
+             <li id="item3"></li>
+             <li id="item4"></li>
+             <li id="item5"></li>
+          </ul>
+          <p id="resultsExpl"></p>
+      </div>
+      <form>
+          <fieldset>
+            <label for="toolBox" id="placeLabel">
+              Type the name of a tool, then click Submit:
+            </label>
+            <input type="text" id="toolBox" />
+          </fieldset>
+          <fieldset>
+            <button type="button" id="button">Submit</button>
+          </fieldset>
+      </form>
+   </article>
+
+   <script type="text/javascript">
+      //Declaring global variables
+      var i = 1;
+      var listItem = '';
+      var item = 'item';
+
+      //Function which will display an list of items up on the screen for the user. 
+      function processInput(){
+
+        //Using a switch statement to determine conditions. 
+        switch (i <= 5){
+          case i == 1:
+            listItem = item + i;
+            var value = document.getElementById('toolBox').value;
+            document.getElementById(listItem).innerHTML = value;
+            break;
+          case i == 2:
+            listItem = item + i;
+            var value = document.getElementById('toolBox').value;
+            document.getElementById(listItem).innerHTML = value;
+            break;
+          case i == 3:
+            listItem = item + i;
+            var value = document.getElementById('toolBox').value;
+            document.getElementById(listItem).innerHTML = value;
+            break;
+          case i == 4:
+            listItem = item + i;
+            var value = document.getElementById('toolBox').value;
+            document.getElementById(listItem).innerHTML = value;
+            break;
+          case i == 5:
+            listItem = item + i;
+            var value = document.getElementById('toolBox').value;
+            document.getElementById(listItem).innerHTML = value;
+            document.getElementById("resultsExpl").innerHTML = "Thanks for your Suggestions.";
+            break;
+          default: 
+            break;
+        }
+        i += 1;
+      }
+
+      //This was old code for section 3-4 that needed to be done before this chapter. 
+      //   if (i <= 5){
+      //     listItem = item + i;
+      //     var value = document.getElementById('toolBox').value;
+      //     document.getElementById(listItem).innerHTML = value;
+      //     if (i == 5){
+      //       document.getElementById("resultsExpl").innerHTML = "Thanks for your Suggestions.";
+      //     }
+      //     i += 1;
+      //   }
+      // }
+
+      document.querySelector("#button").addEventListener('click', processInput);
+      
+   </script>
+</body>
+</html>
