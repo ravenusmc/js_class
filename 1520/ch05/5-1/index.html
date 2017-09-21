@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!--
+      JavaScript 6th Edition
+      Chapter 5
+      Hands-on Project 5-1
+
+      Author: Mike Cuddy
+      Date:   9-21-2017
+
+      Filename: index.html
+   -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Hands-on Project 5-1</title>
+</head>
+
+<body>
+   <h1>
+      Hands-on Project 5-1
+   </h1>
+   
+   <p></p>
+   <p></p>
+   <p></p>
+   <p></p>
+
+   <script type="text/javascript">
+      'use strict';
+
+      document.getElementsByTagName("p")[0].innerHTML = "Web Browser Name: " + navigator.appName;
+
+      document.getElementsByTagName("p")[1].innerHTML = "Web Browser Version: " + navigator.appVersion;
+
+      document.getElementsByTagName("p")[2].innerHTML = "Operating Platform " + navigator.platform;
+
+      document.getElementsByTagName("p")[3].innerHTML = "User Agent: " + navigator.userAgent;
+
+      /*  QUESTION ANSWERS:
+
+      6a: I tested the code in Chrome, Safari and FireFox. Everything was right except for the first
+      line. For the web browser name I got Netscape which makes me wonder if this is a joke or Netscape
+      decaclaring that they won the browswer wars! Is the navigator object left over from the wars? This is true for all the browsers I used! As I said though,
+      at the start, all of the information seemed accurate for the other three lines. 
+
+      6b: The Web Broswer version is different:
+
+         Chrome: Web Browser Version: 5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36
+
+         Safari: 5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/601.7.8 (KHTML, like Gecko) Version/9.1.3 Safari/601.7.8
+
+         Firefox: Web Browser Version: 5.0 (Macintosh) 
+
+         The user agent line is also different: 
+
+         Chrome: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36
+
+         Safari: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/601.7.8 (KHTML, like Gecko) Version/9.1.3 Safari/601.7.8
+
+         Firefox: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:55.0) Gecko/20100101 Firefox/55.0
+
+         Finally, the Operating platform is all the same in each of the three browsers: Operating Platform MacIntel
+
+      6C: I think that the challenges in using the Navigator object would be that the web browser name is not accurate so as far as I know, it cannot be used for that. However, the web browser, Operating platform and user agent info appears to be somewhat accurate. So that information could be used to get some useful information. 
+
+
+      */
+
+   </script>
+</body>
+</html>
