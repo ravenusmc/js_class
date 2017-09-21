@@ -59,38 +59,38 @@
       function processInput(){
 
         //Using a switch statement to determine conditions. 
-        switch (i <= 5){
-          case i == 1:
-            listItem = item + i;
-            var value = document.getElementById('toolBox').value;
-            document.getElementById(listItem).innerHTML = value;
-            break;
-          case i == 2:
-            listItem = item + i;
-            var value = document.getElementById('toolBox').value;
-            document.getElementById(listItem).innerHTML = value;
-            break;
-          case i == 3:
-            listItem = item + i;
-            var value = document.getElementById('toolBox').value;
-            document.getElementById(listItem).innerHTML = value;
-            break;
-          case i == 4:
-            listItem = item + i;
-            var value = document.getElementById('toolBox').value;
-            document.getElementById(listItem).innerHTML = value;
-            break;
-          case i == 5:
-            listItem = item + i;
-            var value = document.getElementById('toolBox').value;
-            document.getElementById(listItem).innerHTML = value;
-            document.getElementById("resultsExpl").innerHTML = "Thanks for your Suggestions.";
-            break;
-          default: 
-            break;
-        }
-        i += 1;
-      }
+      //   switch (i <= 5){
+      //     case i == 1:
+      //       listItem = item + i;
+      //       var value = document.getElementById('toolBox').value;
+      //       document.getElementById(listItem).innerHTML = value;
+      //       break;
+      //     case i == 2:
+      //       listItem = item + i;
+      //       var value = document.getElementById('toolBox').value;
+      //       document.getElementById(listItem).innerHTML = value;
+      //       break;
+      //     case i == 3:
+      //       listItem = item + i;
+      //       var value = document.getElementById('toolBox').value;
+      //       document.getElementById(listItem).innerHTML = value;
+      //       break;
+      //     case i == 4:
+      //       listItem = item + i;
+      //       var value = document.getElementById('toolBox').value;
+      //       document.getElementById(listItem).innerHTML = value;
+      //       break;
+      //     case i == 5:
+      //       listItem = item + i;
+      //       var value = document.getElementById('toolBox').value;
+      //       document.getElementById(listItem).innerHTML = value;
+      //       document.getElementById("resultsExpl").innerHTML = "Thanks for your Suggestions.";
+      //       break;
+      //     default: 
+      //       break;
+      //   }
+      //   i += 1;
+      // }
 
       //This was old code for section 3-4 that needed to be done before this chapter. 
       //   if (i <= 5){
@@ -103,6 +103,26 @@
       //     i += 1;
       //   }
       // }
+
+      if (i <= 5){
+          listItem = item + i;
+          var value = document.getElementById('toolBox').value;
+          document.getElementById(listItem).innerHTML = value;
+          // if (i == 5){
+          //   document.getElementById("resultsExpl").innerHTML = "Thanks for your Suggestions.";
+          // }
+          switch (i){
+            case 5:
+              document.getElementById("resultsExpl").innerHTML = "Thanks for your Suggestions.";
+              break;
+            default:
+                document.getElementById("resultsExpl").innerHTML = "";
+                break;
+          }
+
+          i += 1;
+        }
+      }
 
       document.querySelector("#button").addEventListener('click', processInput);
       
