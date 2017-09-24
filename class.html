@@ -5,20 +5,61 @@
 </head>
 <body>
 
-  <h1>Heading</h1>
+  <p><a href="#1">hi</a></p>
+  <p><a href="#2">hi</a></p>
+  <p><a href="#3">hi</a></p>
 
-  <button onclick='func();'>Button 1</button>
+<!--   <ul>
+    <li id='first'>This is the li number 1</li>
+    <li>This is the li number 2</li>
+    <li>This is the li number 3</li>
+    <li>This is the li number 4</li>
+    <li>This is the li number 5</li>
+  </ul> -->
 
-  <button id='splButton'>Button 2</button>
-
+  <button onclick='quiz();'>Button 1</button>
+  <button onclick='second();'>Button 2</button>
 
 <script type="text/javascript">
 
-  for (var count = 0; count <= 10; count++){
-    document.write(count);
+  function quiz() {
+    var ans = document.getElementsByTagName("a")[2].href;
+    console.log(ans);
   }
+  
+  // function test(){
+  //   var test1 = document.getElementById('first');
+  //   test1.innerHTML = "<a href='#'>This is a Hello</a>";
+  //   //test1.textContent =  "<a href='#'>This is a Hello</a>";
+  // }
 
+  // function second(){
+  //   window.open('http://www.google.com');
+  // }
+
+  //CSS aspects
+  // function test(){
+  //   document.getElementById('first').style.color = 'blue';
+  //   //document.getElementById('first').style.fontSize = "100px";
+
+
+  // }
+
+
+
+  //To remove a style place an empty string = "";
+  //attributes => document.getElementById('first').href 
+  //class must be className 
+
+  //Create Nodes 
+  //document.createElement("element") => document.createElement('div');
+  //where do I place it?
+  //appendChild()
+  //parentNode.appendChild(childNode);
+
+  
 </script>
-
 </body>
 </html>
+
+<!-- textContent strips out HTML -->
