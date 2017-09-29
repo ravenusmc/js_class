@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" type="text/css" href="static/css/tic.css">
+  <!-- Including Jqury -->
+   <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+   <!-- Bootstrap -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- Bootstrap Navbar -->
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="index.html">Home</a>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="hangman.html">Hangman</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="tic.html">Tic Tac Toe</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="about.html">About<span class="sr-only"></span></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!-- End Navbar -->
+
+    <div class='main_container'>
+
+        <div> 
+            <h1 class='p_one player_label'>Player One</h1>
+        </div>
+
+        <div class='board_container'>
+            <h1 class='heading_title'>Mike's Tic Tac Toe</h1>
+            <div class='game_board'>
+                <div class='row_one'>
+                    <div class='one_square' id='square-one'>1</div>
+                    <div class='two_square' id='square-two'>2</div>
+                    <div class='three_square' id='square-three'>3</div>
+                </div>
+                <div class='row_two'>
+                    <div class='four_square' id='square-four'>4</div>
+                    <div class='five_square' id='square-five'>5</div>
+                    <div class='six_square' id='square-six'>6</div>
+                </div>
+                <div class='row_three'>
+                    <div class='seven_square' id='square-seven'>7</div>
+                    <div class='eight_square' id='square-eight'>8</div>
+                    <div class='nine_square' id='square-nine'>9</div>
+                </div>
+            </div>
+            <br/>
+            <button onClick='reset()' id='reset' class='reset'>Reset</button>
+        </div>
+
+        <div>
+            <h1 class='p_two player_label'>Player Two</h1>
+        </div>
+
+    </div>
+
+<script type="text/javascript" src='static/js/tic.js'></script>
+</body>
+</html>
