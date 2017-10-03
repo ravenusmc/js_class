@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Forms</title>
+</head>
+<body>
+
+  <h1>Billing Address</h1>
+  <form>
+    <label>First Name: </label><input id='f_name'><br>
+    <label>Last Name: </label><input><br>
+    <label>Address: </label><input><br>
+    <label>City: </label><input><br>
+    <label>Zip: </label><input>
+    <button>Submit</button>
+  </form>
+
+  <hr>
+
+  <h1>Delivery Address</h1>
+  <input onclick='info();' type="checkbox" name="vehicle" value="Car">Same as Billing Address<br>
+  <form>
+    <label>First Name: </label><input id='address_fName'><br>
+    <label>Last Name: </label><input><br>
+    <label>Address: </label><input><br>
+    <label>City: </label><input><br>
+    <label>Zip: </label><input>
+  </form>
+
+<!--   <form>
+    <select onclick='month();' id='month'>
+      <option value='Jan'>Jan</option>
+      <option value='Feb'>Feb</option>
+      <option value='Mar'>Mar</option>
+    </select>
+    <select>
+
+    </select>
+  </form> -->
+
+<script type="text/javascript" src='form.js'></script>
+</body>
+</html>
