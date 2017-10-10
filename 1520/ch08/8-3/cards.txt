@@ -1,0 +1,6 @@
+This is the text file for the card types on page 611 of the text
+
+A: 4012888888881881 - Visa
+B: 371449635398431 - American Express
+C: 5105105105105100 - MasterCard
+D: 6011000990139424 - Discover
