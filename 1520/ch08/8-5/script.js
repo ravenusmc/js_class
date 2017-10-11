@@ -1,6 +1,6 @@
-//Hands-on Project 8-4
+//Hands-on Project 8-5
 //Mike Cuddy
-//10/10/2017
+//10/11/2017
 //script.js
 
 'use strict';
@@ -22,7 +22,7 @@ function generateList() {
 
     //This block of code makes the items in the array appear on the page.
     //Creating the span element that will contain what the user typed in
-    var newItem = "<span class='first'>first</span>" + list[i];
+    var newItem = "<span class='first'>first</span>" + "<span class='last'>last</span>" + list[i];
     //Creating an li node
     var newListItem = document.createElement("li");
     console.log(newListItem)
@@ -34,6 +34,10 @@ function generateList() {
 
     var firstButtons = document.querySelectorAll('.first');
     var lastFirstButton = firstButtons[firstButtons.length - 1];
+
+    var lastButtons = document.querySelectorAll('.last');
+    var lastLastButton = lastButtons[lastButtons.length -1];
+    
 
     if (lastFirstButton.addEventListener){
       lastFirstButton.addEventListener('click', moveToTop, false);
