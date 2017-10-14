@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Objects</title>
+  <style type="text/css">
+    h1 {
+      color: blue;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>Objects</h1>
+
+<script type="text/javascript">
+
+    // function testFn(){
+
+      //Literal way of Object creation
+      // var testObj = {
+      //   Brand: "Honda",
+      //   Model: "Civic",
+      //   fuelType: "Gasoline",
+      //   carMthd: function() {
+      //     console.log("I am inside a function");
+      //   },
+      //   otherDetails: {
+      //     seatColor: "Black"
+      //   }
+      // };
+
+
+    //   testObj.carMthd()
+    //   console.log(testObj.otherDetails.seatColor)
+    // }
+
+
+    function testFn() {
+
+      function ObjTemplate(brand, model, fuelType) {
+        this.brand = brand;
+        this.model = model;
+        this.fuelType = fuelType;
+      }
+
+      var car1 = new ObjTemplate("Honda", "Civic", "Gasoline");
+      var car2 = new ObjTemplate("Toyota", "Prius", "Hybrid");
+      // car1.brand = "Honda";
+      // car1.model = "Civic";
+      console.log(car1.brand);
+      console.log(car1.model);
+
+      console.log(car2.brand);
+      console.log(car2.model);
+
+    }
+
+
+
+  testFn()
+
+</script>
+</body>
+</html>
