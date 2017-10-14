@@ -1,3 +1,48 @@
-body {
-  background-color: blue;
+/* Generic CSS */
+
+.center {
+  text-align: center;
+}
+
+button {
+  margin-top: 15px;
+  background-color: orange;
+  border-color: orange;
+  padding: 8px;
+  border-radius: 12px;
+}
+
+/* CSS for page */
+
+header {
+  text-align: center
+  border: 2px solid blue;
+}
+
+main {
+  margin-left: 5%;
+  margin-right: 5%;
+  display: flex;
+  flex-direction: row;
+}
+
+.desc_area {
+  width: 50%;
+}
+
+.form_area {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  margin-left: 30px;
+}
+
+.btn_fix {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

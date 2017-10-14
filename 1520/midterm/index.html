@@ -6,9 +6,40 @@
 </head>
 <body>
 
-  <h1>Proj</h1>
+
+  <header>
+    <h1 class='center'>MidTerm Project</h1>
+  </header>
+
+  <main>
+
+    <div class='desc_area'>
+      <h3 class='center'>Requirements</h3>
+      <p>
+        Create a Web page that contains a form.  On the form create five elements in which you can enter integers. Create a function that instantiates the five elements of the array from the form elements and then sums the five integers using the array and a for loop and prints the answer on the page as text.  Call the function when the form is submitted.  Be sure to include enough text on the form so that what is to be done is clear. ie "Please enter integers".
+      </p>
+      <h3>The Numbers Sumed Is: <span id='answer'></span> </h3>
+    </div>
+
+    <div class='form_area'>
+      <h3>Number Form</h3>
+      <h5>Please enter 5 numbers</h5>
+      <form>
+        <label>Number 1:</label><input id='num_one'><br>
+        <label>Number 2:</label><input id='num_two'><br>
+        <label>Number 3:</label><input id='num_three'><br>
+        <label>Number 4:</label><input id='num_four'><br>
+        <label>Number 5:</label><input id='num_five'><br>
+        <div class='btn_fix'>
+          <button onclick="addNumbers(); return false;" id='button'>Submit</button>
+        </div>
+      </form>
+    </div>
+
+  </main>
+  
 
 
-<script type="text/javascript" scr='index.js'></script>
+<script type="text/javascript" src='index.js'></script>
 </body>
 </html>
