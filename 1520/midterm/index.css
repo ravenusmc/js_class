@@ -1,5 +1,9 @@
 /* Generic CSS */
 
+body {
+  background-color: #57627C;
+}
+
 .center {
   text-align: center;
 }
@@ -39,6 +43,7 @@ main {
 
 input {
   margin-left: 30px;
+  margin-bottom: 5px;
 }
 
 .btn_fix {
