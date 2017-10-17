@@ -20,6 +20,7 @@ function processCookie() {
 }
 
 function populateInfo() {
+  debugger;
   if (document.cookie){
     var uname = document.cookie;
     uname = uname.substring(uname.lastIndexOf("=") +1);
