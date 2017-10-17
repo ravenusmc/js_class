@@ -2,6 +2,9 @@
 // Mike Cuddy
 // 10/16/2017
 
+//PLEASE NOTE-THIS CODE WORKS IN FIREFOX BUT NOT SURE IF IT WAS WORKING IN CHROME. 
+//https://stackoverflow.com/questions/15385641/javascript-code-for-cookie-not-working-in-chrome
+
 'use strict';
 
 function processCookie() {
@@ -22,12 +25,13 @@ function handleSubmit(evt) {
   }else {
     evt.returnValue = false;
   }
+  // debugger;
   processCookie();
   document.getElementsByTagName('form')[0].submit();
 }
 
 function createEventListener(){
-  var  loginForm = document.getElementsByTagName("form")[0];
+  var loginForm = document.getElementsByTagName("form")[0];
   if (loginForm.addEventListener){
     loginForm.addEventListener("submit", handleSubmit, false);
   }else if (loginForm.attachEvent){
