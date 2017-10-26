@@ -20,9 +20,14 @@ function setUpPage() {
    var puzzlePieces = document.querySelectorAll("#pieces div");
    onTop = puzzlePieces.length + 1;
    for (var i = 0; i < puzzlePieces.length; i++) {
+      //Disable IE10+ interface gestures
+      puzzlePieces[i].style.msTouchAction = 'none';
+      puzzlePieces[i].style.touchAction = "none";
       if (puzzlePieces[i].addEventListener) {
          puzzlePieces[i].addEventListener("mousedown", startDrag, false);
          puzzlePieces[i].addEventListener('touchstart', startDrag, false);
+         puzzlePieces[i].addEventListener('mspointerdown', startDrag, false);
+         puzzlePieces[i].addEventListener('pointerdown', startDrag, false);
       } else if (puzzlePieces[i].attachEvent) {
          puzzlePieces[i].attachEvent("onmousedown", startDrag);
       }
@@ -34,9 +39,13 @@ function startDrag(event) {
    this.style.zIndex = onTop; // set z-index to move selected element on top of other elements
    onTop++; // increment z-index counter so next selected element is on top of other elements
    event.preventDefault();
+   this.addEventListener("mspointermove", moveDrag, false);
+   this.addEventListener("pointermove", moveDrag, false);
    if (event.type != "mousedown"){
     this.addEventListener('touchmove',moveDrag,false);
     this.addEventListener('touchend', removeTouchListener, false)
+    this.addEventListener('mspointerup', removeTouchListener, false);
+    this.addEventListener('pointerup', removeTouchListener, false);
    }else {
       this.addEventListener("mousemove", moveDrag, false);
       this.addEventListener("mouseup", removeDragListener, false);
@@ -79,7 +88,11 @@ function removeDragListener() {
 //Remove touch event Listeners when dragging ends
 function removeTouchListener() {
   this.removeEventListener('touchmove', moveDrag, false);
+  this.removeEventListener("mspointermove", moveDrag, false);
+  this.removeEventListener("pointermove", moveDrag, false);
   this.removeEventListener('touchend', removeTouchListener, false);
+  this.removeEventListener('mspointerup', removeTouchListener, false);
+  this.removeEventListener('pointerup', removeTouchListener, false);
 }
 
 // run setUpPage() function when page finishes loading
