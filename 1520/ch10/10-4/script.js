@@ -17,13 +17,19 @@ function geoTest() {
   waitForUser = setTimeout(fail, 10000);
 
   if (navigator.geolocation){
-    navigator.geolocation.getCurrentPosition(createMap, fail);
+    navigator.geolocation.getCurrentPosition(createMap, fail, {timeout: 10000});
   }else {
     fail();
   }
 }
 
 function createMap(position) {
+
+  //Coordinates for cities:
+  //Paris, France: 48.866885, 2.348444
+  //Beijing, China: 39.918645, 116.376526
+  //Rio de Janeiro, Brazil: -22.838703, -43.264965
+
   clearTimeout(waitForUser);
   var Lat = position.coords.latitude;
   var Lng = position.coords.longitude;
