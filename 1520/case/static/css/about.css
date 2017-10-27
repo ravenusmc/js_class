@@ -1,0 +1,31 @@
+body, html {
+    height: 96%;
+}
+
+.center {
+  text-align: center;
+}
+
+header {
+  background-image: url(https://docs.google.com/uc?export=download&id=0B5nwes1oxhrpNDZwZ3lnTW1US3c);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header_title_div {
+  color: white;
+  font-family: courier;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
