@@ -18,18 +18,26 @@
       <p>
         Create a Web page that contains a form.  On the form create five elements in which you can enter integers. Create a function that instantiates the five elements of the array from the form elements and then sums the five integers using the array and a for loop and prints the answer on the page as text.  Call the function when the form is submitted.  Be sure to include enough text on the form so that what is to be done is clear. ie "Please enter integers".
       </p>
+      <h3>The Numbers You Entered: </h3>
+      <ol>
+        <li id='one'></li>
+        <li id='two'></li>
+        <li id='three'></li>
+        <li id='four'></li>
+        <li id='five'></li>
+      </ol>
       <h3>The Numbers, Sumed, Is: <span id='answer'></span> </h3>
     </div>
 
     <div class='form_area'>
       <h3>Number Form</h3>
       <h5>Please enter 5 Integers</h5>
-      <form>
-        <label>Integer 1:</label><input type='number' placeholder='Please enter a number' required id='num_one'><br>
-        <label>Integer 2:</label><input type='number' placeholder='Please enter a number' required id='num_two'><br>
-        <label>Integer 3:</label><input type='number' placeholder='Please enter a number' required id='num_three'><br>
-        <label>Integer 4:</label><input type='number' placeholder='Please enter a number' required id='num_four'><br>
-        <label>Integer 5:</label><input type='number' placeholder='Please enter a number' required id='num_five'><br>
+      <form id='form'>
+        <label>Integer 1:</label><input placeholder='Please enter a number' required id='num_one'><br>
+        <label>Integer 2:</label><input placeholder='Please enter a number' required id='num_two'><br>
+        <label>Integer 3:</label><input placeholder='Please enter a number' required id='num_three'><br>
+        <label>Integer 4:</label><input placeholder='Please enter a number' required id='num_four'><br>
+        <label>Integer 5:</label><input placeholder='Please enter a number' required id='num_five'><br>
         <div class='btn_fix'>
           <button onclick="addNumbers(); return false;" id='button'>Submit</button>
         </div>
