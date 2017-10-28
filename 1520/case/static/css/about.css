@@ -30,6 +30,7 @@ header {
 main {
   margin-left: 5%;
   margin-right: 5%;
+  margin-bottom: 50px
 }
 
 /* CSS for section one in main section */
@@ -45,6 +46,27 @@ main {
   height: 300px;
   display: flex;
   flex-direction: row;
+}
+
+/* CSS for footer */
+
+footer {
+  background-color: #4b4b4b;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer_div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.footer_heading {
+  color: #b5b5b5;
 }
 
 
