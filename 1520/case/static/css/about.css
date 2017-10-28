@@ -27,5 +27,25 @@ header {
   align-items: center;
 }
 
+main {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+/* CSS for section one in main section */
+.section_one_heading {
+  margin-top: 50px;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: courier;
+}
+
+.section_one_container {
+  border: 2px solid black;
+  height: 300px;
+  display: flex;
+  flex-direction: row;
+}
+
 
 
