@@ -55,6 +55,31 @@ main {
   font-family: courier;
 }
 
+/* CSS for projects section */
+.projects_section_heading {
+  font-family: courier;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.project_section_div {
+  border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 30px;
+  height: 200px;
+}
+
+.mini_project_section {
+  border: 2px solid blue;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
 /* CSS for footer */
 
 footer {
@@ -65,15 +90,6 @@ footer {
   align-items: center;
   justify-content: center;
 }
-
-/* CSS for projects section */
-.projects_section_heading {
-  font-family: courier;
-  font-size: 30px;
-  font-weight: bold;
-}
-
-/* CSS for footer */
 
 .footer_div {
   display: flex;
@@ -87,11 +103,10 @@ footer {
 }
 
 i:hover {
-  background-color: orange;
+  background-color: #F38D12;
   border-radius: 3px;
   padding: 2px;
 }
-
 
 
 /* Media Queries */
@@ -104,6 +119,14 @@ i:hover {
   .header_title_div {
     margin-left: 5%;
     margin-right: 5%;
+    text-align: center;
+  }
+
+  .project_section_div {
+    height: 400px;
+  }
+
+  .mini_project_section {
     text-align: center;
   }
 
