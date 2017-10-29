@@ -42,10 +42,17 @@ main {
 }
 
 .section_one_container {
-  border: 2px solid black;
-  height: 300px;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:space-around;
+  margin-top: 50px;
+}
+
+.section_one_container > div {
+  max-width: 200px;
+  text-align: center;
+  font-family: courier;
 }
 
 /* CSS for footer */
@@ -59,6 +66,15 @@ footer {
   justify-content: center;
 }
 
+/* CSS for projects section */
+.projects_section_heading {
+  font-family: courier;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* CSS for footer */
+
 .footer_div {
   display: flex;
   flex-direction: row;
@@ -68,6 +84,8 @@ footer {
 .footer_heading {
   color: #b5b5b5;
 }
+
+
 
 /* Media Queries */
 @media only all and (max-width: 768px){
