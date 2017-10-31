@@ -56,6 +56,11 @@ main {
 }
 
 /* CSS for projects section */
+.projects_section {
+  margin-top: 50px;
+}
+
+
 .projects_section_heading {
   font-family: courier;
   font-size: 30px;
@@ -63,7 +68,6 @@ main {
 }
 
 .project_section_div {
-  border: 2px solid red;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -72,12 +76,12 @@ main {
 }
 
 .mini_project_section {
-  border: 2px solid blue;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  padding: 70px;
 }
 
 /* CSS for footer */
@@ -124,6 +128,7 @@ i:hover {
 
   .project_section_div {
     height: 400px;
+    margin-top: -50px;
   }
 
   .mini_project_section {
