@@ -22,11 +22,92 @@
       <h1 class='nav_section_heading'>Girl Scout Cookies Order Form</h1>
     </section>
   </nav>
-
   <!-- End of Navbar -->
 
+  <!-- Header -->
+  <header>
+  </header>
+  <!-- End Header -->
 
+  <!-- Main Section -->
+  <main class='main_section' role='main'>
+    <h3>Account Info</h3>
+    <section class='section_one'>
 
+      <form>
+        <div>
+          <label>First Name: </label><input id='firstName' type="text" required="required">
+        </div>
+        <div>
+          <label>Last Name: </label><input id='firstName' type="text" required="required">
+        </div>
+        <div>
+          <label>Street Address: </label><input id='address' type="text" required="required">
+        </div>
+        <div>
+          <label>City: </label><input id='city' type="text" required="required">
+        </div>
+        <div>
+          <label>State: </label><input id='state' type="text" required="required">
+        </div>
+        <div>
+          <label>Zip Code: </label><input id='zip' type="text" required="required">
+        </div>
+        <div>
+          <input onclick='fillShipping();' type="checkbox" name="vehicle" id='shippingBox'>Use Address for Shipping<br>
+        </div>
+      </form>
+
+      <h3>Shipping</h3>
+      <form>
+        <div>
+          <label>Street Address: </label><input id='ship_address' type="text" required="required">
+        </div>
+        <div>
+          <label>City: </label><input id='ship_city' type="text" required="required">
+        </div>
+        <div>
+          <label>State: </label><input id='ship_state' type="text" required="required">
+        </div>
+        <div>
+          <label>Zip Code: </label><input id='ship_zip' type="text" required="required">
+        </div>
+      </form>
+
+    </section>
+
+    <section class='section_two'>
+      <h3>Cookies</h3>
+      <form>
+        <div>
+          <label>Thin Mints</label><input type='number'>
+        </div>
+        <div>
+          <label>Do Si Do's</label><input type='number'>
+        </div> 
+        <div>
+          <label>Lemon Cremes</label><input type='number'>
+        </div> 
+        <div>
+          <label>Sand Dollars</label><input type='number'>
+        </div> 
+        <div>
+          <label>Chocalate Chip</label><input type='number'>
+        </div>   
+      </form>
+
+      <h3>Order Info</h3>
+      
+    </section>
+    <button>Submit</button>
+  </main>
+  <!-- End Main Section -->
+
+  <!-- Footer area -->
+  <footer>
+
+  </footer>
+  <!-- End footer section --> 
 
 <script type="text/javascript" src='assets/js/final.js'></script>
 </body>
