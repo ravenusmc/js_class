@@ -1,3 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
 body {
-  background-color: blue;
+  height: 100%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+/* CSS for navbar */ 
+
+nav {
+  background-color: #18A755;
+  height: 125px;
+}
+
+img {
+  height: 75px;
+  margin-top: 20px;
+}
+
+.navbar_section {
+  height: 50px;
+  background-color: #fece24;
+}
+
+.nav_section_heading {
+  text-align: center;
+  font-size: 30px;
+  padding: 8px;
+}
+
+
+/* Media Queries */ 
+@media only all and (max-width: 768px){
+
+  body {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .nav_section_heading {
+    font-size: 20px;
+  }
 }
