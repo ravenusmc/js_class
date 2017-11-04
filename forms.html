@@ -8,20 +8,22 @@
   <h1>Billing Address</h1>
   <form>
     <label>First Name: </label><input id='f_name'><br>
-    <label>Last Name: </label><input><br>
+    <label>Last Name: </label><input id='l_name'><br>
     <label>Address: </label><input><br>
     <label>City: </label><input><br>
     <label>Zip: </label><input>
     <button>Submit</button>
   </form>
 
+  <input onclick='info();' type="checkbox" name="vehicle" value="Car">Same as Billing Address<br>
+  
   <hr>
 
   <h1>Delivery Address</h1>
-  <input onclick='info();' type="checkbox" name="vehicle" value="Car">Same as Billing Address<br>
+
   <form>
     <label>First Name: </label><input id='address_fName'><br>
-    <label>Last Name: </label><input><br>
+    <label>Last Name: </label><input id='address_lName'><br>
     <label>Address: </label><input><br>
     <label>City: </label><input><br>
     <label>Zip: </label><input>

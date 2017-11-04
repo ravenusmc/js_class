@@ -12,7 +12,9 @@ function info(){
 
   var first_Name = document.getElementById('f_name').value;
   var last_Name = document.getElementById('l_name').value;
+
   var add_first = document.getElementById('address_fName');
-  var add_last = document.getElementById('')
+  var add_last = document.getElementById('address_lName');
   add_first.value = first_Name;
+  add_last.value = last_Name;
 }
