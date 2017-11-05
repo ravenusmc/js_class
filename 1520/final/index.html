@@ -31,10 +31,10 @@
 
   <!-- Main Section -->
   <main class='main_section' role='main'>
-    <h3>Account Info</h3>
-    <section class='section_one'>
 
+    <section class='section_one'>
       <form>
+        <h3 class='center'>Account Info</h3>
         <div>
           <label>First Name: </label><input id='firstName' type="text" required="required">
         </div>
@@ -58,8 +58,8 @@
         </div>
       </form>
 
-      <h3>Shipping</h3>
       <form>
+        <h3 class='center'>Shipping</h3>
         <div>
           <label>Street Address: </label><input id='ship_address' type="text" required="required">
         </div>
@@ -77,8 +77,8 @@
     </section>
 
     <section class='section_two'>
-      <h3>Cookies</h3>
       <form>
+        <h3 class='center'>Cookies</h3>
         <div>
           <label>Thin Mints</label><input id='thin' type='number'>
         </div>
@@ -104,9 +104,8 @@
         <p>City: <span id='orderCity'></span></p>
         <p>State: <span id='orderState'></span></p>
         <p>Zip: <span id='orderZip'></span></p>
-        <p>Order Total: <span id='orderTotal'></span></p>
+        <p>Order Total: $<span id='orderTotal'></span></p>
       </div>
-      
       
     </section>
     <button onclick='submit()'>Submit</button>

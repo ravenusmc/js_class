@@ -121,27 +121,14 @@ function submit() {
 
     order = calculateCost(order);
 
+    //Here I bring back a div container that is currently hidden.
     document.getElementById("order_info_div").style.display = 'block';
 
+    //I display all the user information. 
     document.getElementById('orderName').innerHTML = order.firstName + ' ' + order.lastName;
     document.getElementById('orderAddress').innerHTML  = order.address;
     document.getElementById('orderCity').innerHTML  = order.city;
     document.getElementById('orderState').innerHTML  = order.state;
     document.getElementById('orderZip').innerHTML  = order.zip;
     document.getElementById('orderTotal').innerHTML  = order.total;
-
 }
-
-
-    // console.log(order.firstName);
-    // console.log(order.lastName);
-    // console.log(order.address);
-    // console.log(order.city);
-    // console.log(order.state);
-    // console.log(order.zip);
-    // console.log(typeof order.thin);
-    // console.log(order.Do);
-    // console.log(order.lemon);
-    // console.log(order.sand);
-    // console.log(order.choc);
-    // console.log(order.total);
