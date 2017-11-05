@@ -17,7 +17,8 @@ order = {
   Do: 0,
   lemon: 0, 
   sand: 0,
-  choc: 0
+  choc: 0,
+  total: 0
 };
 
 //This function will fire when the radio button is checked to fill in the shipping address area. 
@@ -51,6 +52,31 @@ function fillShipping(){
   }
 }
 
+//This function will return the total cost of the order. 
+function calculateCost(order) {
+
+    //Declaring a variable to hold the order total amount.
+    var orderTotal = 0;
+
+    //Here I'm getting the total number of boxes for all the cookies. 
+    boxesTotal = order.thin + order.Do + order.lemon + order.sand + order.choc; 
+
+    //Calculating order total based on number of boxes ordered since that will depend
+    //on shipping costs.
+    if (boxesTotal < 10){
+      orderTotal = boxesTotal * 3.5;
+      //calculating for shipping 
+      shippingCost = orderTotal * .05;
+      orderTotal = orderTotal + shippingCost;
+    }else if (boxesTotal >= 10){
+      orderTotal = boxesTotal * 3.5;
+    }
+
+    order.total = orderTotal;
+
+    return order;
+}
+
 //This function will collect all of the data when the user hits the submit button. 
 function submit() {
 
@@ -72,14 +98,15 @@ function submit() {
         zip = document.getElementById('zip').value;
     }
 
-    //Here I get the amount of each type of cookie. 
-    var thin = document.getElementById('thin').value;
-    var Do = document.getElementById('do').value;
-    var lemon = document.getElementById('lemon').value;
-    var sand = document.getElementById('sand').value;
-    var choc = document.getElementById('choc').value;
+    //Here I get the amount of each type of cookie. I change the data type to a number
+    //to ensure that I have the right data type.
+    var thin = Number(document.getElementById('thin').value);
+    var Do = Number(document.getElementById('do').value);
+    var lemon = Number(document.getElementById('lemon').value);
+    var sand = Number(document.getElementById('sand').value);
+    var choc = Number(document.getElementById('choc').value);
 
-
+    //Here I set each value to the order object.
     order.firstName = firstName;
     order.lastName = lastName;
     order.address = address;
@@ -92,16 +119,29 @@ function submit() {
     order.sand = sand;
     order.choc = choc; 
 
-    console.log(order.firstName);
-    console.log(order.lastName);
-    console.log(order.address);
-    console.log(order.city);
-    console.log(order.state);
-    console.log(order.zip);
-    console.log(order.thin);
-    console.log(order.Do);
-    console.log(order.lemon);
-    console.log(order.sand);
-    console.log(order.choc);
+    order = calculateCost(order);
+
+    document.getElementById("order_info_div").style.display = 'block';
+
+    document.getElementById('orderName').innerHTML = order.firstName + ' ' + order.lastName;
+    document.getElementById('orderAddress').innerHTML  = order.address;
+    document.getElementById('orderCity').innerHTML  = order.city;
+    document.getElementById('orderState').innerHTML  = order.state;
+    document.getElementById('orderZip').innerHTML  = order.zip;
+    document.getElementById('orderTotal').innerHTML  = order.total;
 
 }
+
+
+    // console.log(order.firstName);
+    // console.log(order.lastName);
+    // console.log(order.address);
+    // console.log(order.city);
+    // console.log(order.state);
+    // console.log(order.zip);
+    // console.log(typeof order.thin);
+    // console.log(order.Do);
+    // console.log(order.lemon);
+    // console.log(order.sand);
+    // console.log(order.choc);
+    // console.log(order.total);
