@@ -161,7 +161,7 @@ input {
 /* CSS for footer section */
 footer {
   background-color: #18A755;
-  height: 200px;
+  height: 250px;
 }
 
 .footer_section_one {
@@ -178,6 +178,18 @@ footer ul li {
   text-decoration: none;
   display:inline;
   padding: 25px
+}
+
+.footer_paragraph {
+  color: white;
+}
+
+.color_fix {
+  color: white;
+}
+
+.color_fix:hover {
+  color: blue;
 }
 
 /* Media Queries */ 
