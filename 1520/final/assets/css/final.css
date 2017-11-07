@@ -90,29 +90,6 @@ header {
   color: white;
 }
 
-/*.arrow {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  margin-top: -40px;
-  width: 0;
-  height: 0;
-  border-style: solid;
-}
-
-#arrow-left {
-  border-width: 30px 40px 30px 0;
-  border-color: transparent #fff transparent transparent;
-  left: 0;
-  margin-left: 30px;
-}
-
-#arrow-right {
-  border-width: 30px 0 30px 40px;
-  border-color: transparent transparent transparent #fff ;
-  right: 0;
-  margin-right: 30px;
-}*/
 
 /* CSS for main area */
 main {
@@ -140,9 +117,19 @@ label {
   padding-right: 1em;
 }
 
-input {
+.input_fix {
   display: block;
   width: 18em;
+}
+
+.cookie_input {
+  width: 2.5em;
+}
+
+.heading_area {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .section_two {
@@ -150,6 +137,7 @@ input {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: center;
   border: 2px solid red;
 }
 
@@ -200,7 +188,33 @@ footer ul li {
     margin-right: 5%;
   }
 
+  nav {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+
   .nav_section_heading {
     font-size: 20px;
   }
+
+  .section_one {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section_two {
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer {
+    height: 350px;
+  }
+
+  footer ul li {
+    display:inline;
+    padding: 15px;
+  }
+
 }

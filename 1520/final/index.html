@@ -53,41 +53,43 @@
       <form>
         <h3 class='center'>Account Info</h3>
         <div>
-          <label>First Name: </label><input id='firstName' type="text" required="required">
+          <label>First Name: </label><input class='input_fix' id='firstName' type="text" required="required">
         </div>
         <div>
-          <label>Last Name: </label><input id='lastName' type="text" required="required">
+          <label>Last Name: </label><input class='input_fix' id='lastName' type="text" required="required">
         </div>
         <div>
-          <label>Street Address: </label><input id='address' type="text" required="required">
+          <label>Street Address: </label><input class='input_fix' id='address' type="text" required="required">
         </div>
         <div>
-          <label>City: </label><input id='city' type="text" required="required">
+          <label>City: </label><input class='input_fix' id='city' type="text" required="required">
         </div>
         <div>
-          <label>State: </label><input id='state' type="text" required="required">
+          <label>State: </label><input class='input_fix' id='state' type="text" required="required">
         </div>
         <div>
-          <label>Zip Code: </label><input id='zip' type="text" required="required">
+          <label>Zip Code: </label><input class='input_fix' id='zip' type="text" required="required">
         </div>
         <div>
-          <input onclick='fillShipping();' type="checkbox" name="vehicle" id='shippingBox'>Use Address for Shipping<br>
+          <input class='text' onclick='fillShipping();' type="checkbox" name="vehicle" id='shippingBox'>Use Address for Shipping<br>
+          <input onclick='fillShipping();' type="checkbox" name="vehicle" id='shippingBox'>Use Seperate Address for Shipping
         </div>
       </form>
+
 
       <form>
         <h3 class='center'>Shipping</h3>
         <div>
-          <label>Street Address: </label><input id='ship_address' type="text" required="required">
+          <label>Street Address: </label><input class='input_fix' id='ship_address' type="text" required="required">
         </div>
         <div>
-          <label>City: </label><input id='ship_city' type="text" required="required">
+          <label>City: </label><input class='input_fix' id='ship_city' type="text" required="required">
         </div>
         <div>
-          <label>State: </label><input id='ship_state' type="text" required="required">
+          <label>State: </label><input class='input_fix' id='ship_state' type="text" required="required">
         </div>
         <div>
-          <label>Zip Code: </label><input id='ship_zip' type="text" required="required">
+          <label>Zip Code: </label><input class='input_fix' id='ship_zip' type="text" required="required">
         </div>
       </form>
 
@@ -96,32 +98,38 @@
     <section class='section_two'>
       <form>
         <h3 class='center'>Cookies</h3>
-        <div>
-          <label>Thin Mints</label><input id='thin' type='number'>
+        <div class='heading_area'>
+          <h4>Type</h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <h4>Quantity</h4>
         </div>
         <div>
-          <label>Do Si Do's</label><input id='do' type='number'>
+          <label>Thin Mints</label><input class='cookie_input' id='thin' type='number'>
+        </div>
+        <div>
+          <label>Do Si Do's</label><input class='cookie_input' id='do' type='number'>
         </div> 
         <div>
-          <label>Lemon Cremes</label><input id='lemon' type='number'>
+          <label>Lemon Cremes</label><input class='cookie_input' id='lemon' type='number'>
         </div> 
         <div>
-          <label>Sand Dollars</label><input id='sand' type='number'>
+          <label>Sand Dollars</label><input class='cookie_input' id='sand' type='number'>
         </div> 
         <div>
-          <label>Chocalate Chip</label><input id='choc' type='number'>
+          <label>Chocalate Chip</label><input class='cookie_input' id='choc' type='number'>
         </div>   
       </form>
 
-      <div class='order_info' id='order_info_div'>
-        <h3>Order Info</h3>
-        <h5>Deliver to:</h5>
-        <p>Name: <span id='orderName'></span></p>
-        <p>Address: <span id='orderAddress'></span> </p>
-        <p>City: <span id='orderCity'></span></p>
-        <p>State: <span id='orderState'></span></p>
-        <p>Zip: <span id='orderZip'></span></p>
-        <p>Order Total: $<span id='orderTotal'></span></p>
+      <div id='order_info_div'>
+        <div class='order_info'>
+          <h3>Order Info</h3>
+          <h5>Deliver to:</h5>
+          <p>Name: <span id='orderName'></span></p>
+          <p>Address: <span id='orderAddress'></span> </p>
+          <p>City: <span id='orderCity'></span></p>
+          <p>State: <span id='orderState'></span></p>
+          <p>Zip: <span id='orderZip'></span></p>
+          <p>Order Total: $<span id='orderTotal'></span></p>
+        </div>
       </div>
       
     </section>
