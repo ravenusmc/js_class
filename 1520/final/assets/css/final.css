@@ -21,6 +21,13 @@ body {
 nav {
   background-color: #18A755;
   height: 125px;
+  position: fixed;
+  z-index: 10;
+  margin-left: 10%;
+  margin-right: 10%;
+  top: 0px;
+  right: 0;
+  left: 0;
 }
 
 img {
@@ -41,7 +48,7 @@ img {
 
 /* CSS for header area */ 
 header {
-  margin-top: 50px;
+  margin-top: 200px;
 /*  background-image: url(../img/cookie_one.jpg);*/
 /*  background-size: cover;
   background-position: center;
@@ -155,6 +162,22 @@ input {
 footer {
   background-color: #18A755;
   height: 200px;
+}
+
+.footer_section_one {
+  padding-top: 50px;
+}
+
+footer ul {
+  display: inline;
+  text-decoration: none;
+}
+
+footer ul li {
+  color: white;
+  text-decoration: none;
+  display:inline;
+  padding: 25px
 }
 
 /* Media Queries */ 
