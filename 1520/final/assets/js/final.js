@@ -37,7 +37,7 @@ function fillShipping(){
   var shipZip = document.getElementById('ship_zip');
 
   //Conditional statement as to what the radio button is checked or not. 
-  if (document.getElementById('shippingBox').checked){
+  if (document.getElementById('same').checked){
 
     shipAddress.value = address;
     shipCity.value = city;
@@ -86,16 +86,16 @@ function submit() {
 
     //This conditional statement will get the shipment address based on whether or not the 
     //radio button is checked or not. 
-    if (document.getElementById('shippingBox').checked){
-        address = document.getElementById('ship_address').value;
-        city = document.getElementById('ship_city').value;
-        state = document.getElementById('ship_state').value;
-        zip = document.getElementById('ship_zip').value;
-    }else {
+    if (document.getElementById('same').checked){
         address = document.getElementById('address').value;
         city = document.getElementById('city').value;
         state = document.getElementById('state').value;
         zip = document.getElementById('zip').value;
+    }else if (document.getElementById('different').checked) {
+        address = document.getElementById('ship_address').value;
+        city = document.getElementById('ship_city').value;
+        state = document.getElementById('ship_state').value;
+        zip = document.getElementById('ship_zip').value;
     }
 
     //Here I get the amount of each type of cookie. I change the data type to a number

@@ -50,7 +50,7 @@
   <main class='main_section' role='main'>
 
     <section class='section_one'>
-      <form>
+      <form class='form_style'>
         <h3 class='center'>Account Info</h3>
         <div>
           <label>First Name: </label><input class='input_fix' id='firstName' type="text" required="required">
@@ -71,13 +71,13 @@
           <label>Zip Code: </label><input class='input_fix' id='zip' type="text" required="required">
         </div>
         <div>
-          <input class='text' onclick='fillShipping();' type="checkbox" name="vehicle" id='shippingBox'>Use Address for Shipping<br>
-          <input onclick='fillShipping();' type="checkbox" name="vehicle" id='shippingBox'>Use Seperate Address for Shipping
+          <input class='text' onclick='fillShipping();' type="radio" name="vehicle" id='same'>Use Address for Shipping<br>
+          <input type="radio" name="vehicle" id='different'>Use Seperate Address for Shipping
         </div>
       </form>
 
 
-      <form>
+      <form class='form_style'>
         <h3 class='center'>Shipping</h3>
         <div>
           <label>Street Address: </label><input class='input_fix' id='ship_address' type="text" required="required">
@@ -96,7 +96,8 @@
     </section>
 
     <section class='section_two'>
-      <form>
+      <div class='cookie_section'>
+      <form class='form_style'>
         <h3 class='center'>Cookies</h3>
         <div class='heading_area'>
           <h4>Type</h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -118,9 +119,11 @@
           <label>Chocalate Chip</label><input class='cookie_input' id='choc' type='number'>
         </div>   
       </form>
+      <button onclick='submit()'>Submit Order</button>
+      </div>
 
-      <div id='order_info_div'>
-        <div class='order_info'>
+      <div>
+        <div class='order_info' id='order_info_div'>
           <h3>Order Info</h3>
           <h5>Deliver to:</h5>
           <p>Name: <span id='orderName'></span></p>
@@ -133,7 +136,6 @@
       </div>
       
     </section>
-    <button onclick='submit()'>Submit</button>
   </main>
   <!-- End Main Section -->
 
