@@ -52,6 +52,16 @@ function fillShipping(){
   }
 }
 
+function clear() {
+  alert('Hi')
+
+  // var shipAddress = document.getElementById('ship_address');
+  // var shipCity = document.getElementById('ship_city');
+  // var shipState = document.getElementById('ship_state');
+  // var shipZip = document.getElementById('ship_zip');
+  // shipAddress.value = '';
+}
+
 //This function will return the total cost of the order. 
 function calculateCost(order) {
 
