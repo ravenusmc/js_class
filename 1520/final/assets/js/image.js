@@ -20,7 +20,6 @@ function startSlide() {
 
 startSlide();
 
-
 window.onload = function(){
    setInterval(function(){
       reset();
@@ -33,7 +32,6 @@ window.onload = function(){
       }else if (current === 2){
         sliderImages[current].style.display = 'block';
         current = 0;
-        console.log('Current:', current)
       }
 
    }, 4000);

@@ -52,14 +52,19 @@ function fillShipping(){
   }
 }
 
-function clear() {
-  alert('Hi')
+function clearTest() {
 
-  // var shipAddress = document.getElementById('ship_address');
-  // var shipCity = document.getElementById('ship_city');
-  // var shipState = document.getElementById('ship_state');
-  // var shipZip = document.getElementById('ship_zip');
-  // shipAddress.value = '';
+  if (document.getElementById('different').checked){
+      var shipAddress = document.getElementById('ship_address');
+      var shipCity = document.getElementById('ship_city');
+      var shipState = document.getElementById('ship_state');
+      var shipZip = document.getElementById('ship_zip');
+      shipAddress.value = '';
+      shipCity.value = '';
+      shipState.value = '';
+      shipZip.value = '';
+  }
+
 }
 
 //This function will return the total cost of the order. 
@@ -142,3 +147,8 @@ function submit() {
     document.getElementById('orderZip').innerHTML  = order.zip;
     document.getElementById('orderTotal').innerHTML  = order.total;
 }
+
+// rounding: 
+console.log(5.467);
+num = Math.round(100*5.467)/100;
+console.log(num);
