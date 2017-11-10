@@ -52,7 +52,8 @@ function fillShipping(){
   }
 }
 
-function clearTest() {
+//This function will clear the address if the user accidently hits 'use same address'
+function clearAddress() {
 
   if (document.getElementById('different').checked){
       var shipAddress = document.getElementById('ship_address');
@@ -83,9 +84,19 @@ function calculateCost(order) {
       //calculating for shipping 
       shippingCost = orderTotal * .05;
       orderTotal = orderTotal + shippingCost;
+      //Rounding the order total
+      orderTotal = Math.round(100 * orderTotal) / 100;
     }else if (boxesTotal >= 10){
       orderTotal = boxesTotal * 3.5;
+      //Rounding the order total
+      orderTotal = Math.round(100 * orderTotal) / 100;
     }
+
+// rounding: 
+console.log(5.467);
+num = Math.round(100*5.467)/100;
+console.log(num);
+
 
     order.total = orderTotal;
 
@@ -148,7 +159,4 @@ function submit() {
     document.getElementById('orderTotal').innerHTML  = order.total;
 }
 
-// rounding: 
-console.log(5.467);
-num = Math.round(100*5.467)/100;
-console.log(num);
+
