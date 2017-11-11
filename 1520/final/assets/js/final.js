@@ -18,6 +18,8 @@ order = {
   lemon: 0, 
   sand: 0,
   choc: 0,
+  subTotal: 0,
+  shipping: 0,
   total: 0
 };
 
@@ -80,25 +82,33 @@ function calculateCost(order) {
     //Calculating order total based on number of boxes ordered since that will depend
     //on shipping costs.
     if (boxesTotal < 10){
-      orderTotal = boxesTotal * 3.5;
-      //calculating for shipping 
-      shippingCost = orderTotal * .05;
-      orderTotal = orderTotal + shippingCost;
+
+      //Calculating subTotal
+      subTotal = boxesTotal * 3.5;
+      order.subTotal = subTotal;
+
+      //calculating for shipping cost
+      shippingCost = subTotal * .05;
+      //Rounding the shipping cost
+      shippingCost = Math.round(100 * shippingCost) / 100;
+      order.shipping = shippingCost;
+
+      //Calculating total costs
+      orderTotal = subTotal + shippingCost;
       //Rounding the order total
       orderTotal = Math.round(100 * orderTotal) / 100;
+      order.total = orderTotal;
     }else if (boxesTotal >= 10){
-      orderTotal = boxesTotal * 3.5;
+      //Calculating the sub total
+      subTotal = boxesTotal * 3.5;
       //Rounding the order total
-      orderTotal = Math.round(100 * orderTotal) / 100;
+      subTotal = Math.round(100 * subTotal) / 100;
+      console.log(subTotal);
+      order.subTotal = subTotal;
+      order.total = subTotal;
+      console.log(order.total);
+      order.shipping = 0;
     }
-
-// rounding: 
-console.log(5.467);
-num = Math.round(100*5.467)/100;
-console.log(num);
-
-
-    order.total = orderTotal;
 
     return order;
 }
@@ -156,6 +166,8 @@ function submit() {
     document.getElementById('orderCity').innerHTML  = order.city;
     document.getElementById('orderState').innerHTML  = order.state;
     document.getElementById('orderZip').innerHTML  = order.zip;
+    document.getElementById('orderSub').innerHTML  = order.subTotal;
+    document.getElementById('orderShipping').innerHTML  = order.shipping;
     document.getElementById('orderTotal').innerHTML  = order.total;
 }
 

@@ -10,7 +10,7 @@
     PLEASE NOTE: I slightly changed the way that the book described how to do it because the book directions
     got a little confusing. However, my method works and does everything that it is supposed to do. The only 
     bad aspect of the code is that it is not 'DRY' but instead, a little 'WET'. The three functions that I created
-    china, france and brazil all do the same thing with only  the coordinates changing. Thus, I could have written
+    china, france and brazil all do the same thing with only the coordinates changing. Thus, I could have written
     only one function. I understand that. The old.js file contains my at trying to do it the book way. 
 */
 

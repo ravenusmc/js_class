@@ -1,0 +1,27 @@
+<!DOCTYPE <html>
+<head>
+  <title>Maps</title>
+  <link rel="stylesheet" type="text/css" href="maps.css">
+</head>
+<body>
+
+  <h1>Maps</h1>
+
+
+  <script type="text/javascript">
+
+    navigator.geolocation.getCurrentPosition(showLocation);
+
+    function showLocation(position) {
+
+      var currLng = position.coords.longitude;
+      var currLat = position.coords.latitude;
+
+      console.log("Long: " + currLng);
+      console.log("Long: " + currLat);
+    }
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE <html>
+<head>
+  <title>Chapter 10</title>
+</head>
+<body onmousemove="showCords(event)">
+
+<h1>This is a heading</h1>
+<p>This is a para</p>
+
+<div id='testDiv' style='width:100px; height:100px; position:absolute; z-index:10; left:0 top:0; background:red'></div>
+
+<script type="text/javascript">
+  function showCords(event){
+    var x = event.clientX;
+    var y = event.clientY;
+
+    var testEl = document.getElementById('testDiv');
+
+    testEl.style.left = x + 'px';
+    testEl.style.top = y + 'px';
+
+    // console.log("X:" + x + "Y:" y);
+  }
+
+
+</script>
+
+
+</body>
+</html>

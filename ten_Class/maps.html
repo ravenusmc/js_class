@@ -1,0 +1,37 @@
+<!DOCTYPE <html>
+<head>
+  <title>Maps</title>
+  <link rel="stylesheet" type="text/css" href="maps.css">
+</head>
+<body>
+
+  <h1>Maps</h1>
+  <div id='mapContainer'></div>
+
+
+  <script type="text/javascript">
+
+    navigator.geolocation.getCurrentPosition(showLocation);
+
+    function showLocation(position) {
+
+      var currLng = position.coords.longitude;
+      var currLat = position.coords.latitude;
+
+      var mapOptions = {
+        center:  new google.maps.LatLng(currLat, currLng),
+        zoom: 11
+      }
+
+      var map = new google.maps.Map(document.getElementById('mapContainer'), mapOptions);
+
+      console.log("Long: " + currLng);
+      console.log("Long: " + currLat);
+    }
+
+  </script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1K8ArQpSCqRFhW7wR57_6JwTE_9p6wac">
+    </script>
+</body>
+</html>
