@@ -169,6 +169,12 @@ function submit() {
     document.getElementById('orderSub').innerHTML  = order.subTotal;
     document.getElementById('orderShipping').innerHTML  = order.shipping;
     document.getElementById('orderTotal').innerHTML  = order.total;
+    document.getElementById('thinOrder').innerHTML = order.thin;
+    document.getElementById('doOrder').innerHTML = order.Do;
+    document.getElementById('LemonOrder').innerHTML = order.lemon;
+    document.getElementById('SandOrder').innerHTML = order.sand;
+    document.getElementById('chocOrder').innerHTML = order.choc;
+
 }
 
 
