@@ -103,19 +103,19 @@
           <h4>Quantity</h4>
         </div>
         <div>
-          <label>Thin Mints</label><input class='cookie_input' id='thin' type='number'>
+          <label>Thin Mints</label><input class='cookie_input' id='thin' type='number' maxLength='2' oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
         </div>
         <div>
-          <label>Do Si Do's</label><input class='cookie_input' id='do' type='number'>
+          <label>Do Si Do's</label><input class='cookie_input' id='do' type='number' maxLength='2' oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
         </div> 
         <div>
-          <label>Lemon Cremes</label><input class='cookie_input' id='lemon' type='number'>
+          <label>Lemon Cremes</label><input class='cookie_input' id='lemon' type='number' maxLength='2' oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
         </div> 
         <div>
-          <label>Sand Dollars</label><input class='cookie_input' id='sand' type='number'>
+          <label>Sand Dollars</label><input class='cookie_input' id='sand' type='number' maxLength='2' oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
         </div> 
         <div>
-          <label>Chocalate Chip</label><input class='cookie_input' id='choc' type='number'>
+          <label>Chocalate Chip</label><input class='cookie_input' id='choc' type='number' maxLength='2' oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
         </div>   
       </form>
       <button onclick='submit()'>Submit Order</button>
